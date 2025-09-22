@@ -1,0 +1,19 @@
+# Archivos de Python compilados
+__pycache__/
+*.pyc
+
+# Carpeta de archivos estáticos de producción
+/staticfiles/
+
+# Base de datos local de SQLite
+db.sqlite3
+
+# Entornos virtuales
+venv/
+env/
+
+# Configuración de IDEs y editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
