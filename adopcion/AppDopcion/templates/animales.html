@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Animales{% endblock %}
+
+{% block content %}
+<div class="title-banner text-center py-4 mb-5">
+  <h2 class="title-text">🐾 Encuentra a tu próximo <span>MEJOR AMIGO</span> 🐾</h2>
+</div>
+
+<div class="row animales">
+  {% for animal in animales %}
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="{{ animal.imagen.url }}" class="card-img-top" alt="{{ animal.tipo }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ animal.nombre }}</h5>
+          <p class="card-text">{{ animal.descripcion }}</p>
+          <p class="card-text">Edad: {{ animal.edad }}</p>
+          <p class="card-text">Tamaño: {{ animal.tamano }}</p>
+          <a href="{% url 'adoptar_animal' animal.id %}" class="btn-adoptar w-100">Adóptame ❤️</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+
+
+{% endblock %}
+<!-- <a href="{% url 'contacto' %}" class="btn btn-primary w-100">Adóptame ❤️</a> >  ESTO  va dentro de la clase yHAY QUE MODIFICARLO DESPUES  -->

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container mt-5">
+
+  <!--barra de presentacion-->
+  <div class="text-center mb-5">
+    <h1 class="display-4 text">Conoce a tu nuevo amigo 🐶🐱</h1>
+    <p class="parrafo-inicio">"Hasta que no hayas amado a un animal, una parte de tu alma permanecerá dormida" - Anatole France</p>
+    <p class="parrafo-segundo">
+      Somos una fundación dedicada a rescatar y dar en adopción a perritos y gatitos que necesitan un hogar.
+      Nuestro compromiso es asegurar que cada animal encuentre una familia responsable y amorosa.
+    </p>
+  </div>
+
+<!--este es el carrusel-->
+<div id="carruselTestimonios" class="carousel slide mt-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <!--testimonios pal carrusel-->
+    <div class="carousel-item active">
+      <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+        <img src="{% static 'img/perro2.jpg' %}" class="d-block" alt="Rocky" style="width:50%; border-radius:15px;">
+        <div class="p-3">
+          <p class="card-text fst-italic">"Desde que adoptamos a Rocky nuestra vida ha cambiado mucho,hemos aprendido a amarlo tanto como el a nosotros.Despertar y verlo moviendo la cola todos los dias es una alegría que no se compara con nada,Gracias a AdoptApp por esta gran causa!"</p>
+          <small class="text-muted">– Pedro y Ana</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+        <img src="{% static 'img/gatito1v2.jpg' %}" class="d-block" alt="Michi" style="width:50%; border-radius:15px;">
+        <div class="p-3">
+          <p class="card-text fst-italic">"Adoptar a gris fue la mejor decisión de mi vida, es parte de nuestra familia, come, juega y sobre todo duerme, pero lo hace todo junto a nosotros."</p>
+          <small class="text-muted">– Familia González</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+        <img src="{% static 'img/perro3.jpg' %}" class="d-block" alt="Luna" style="width:50%; border-radius:15px;">
+        <div class="p-3">
+          <p class="card-text fst-italic">"Firulais nos trajo tanta alegría, como resguardo en mi casa, recomendamos AdoptApp 100% ."</p>
+          <small class="text-muted">– Camila R.</small>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- flechitas -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carruselTestimonios" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carruselTestimonios" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+{% endblock %}

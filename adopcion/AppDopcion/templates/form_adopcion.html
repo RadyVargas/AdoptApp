@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<!--formulario con el token-->
+<div class="container mt-5">
+  <h2>Formulario de Adopción</h2>
+  <p>Estás a punto de adoptar a <strong>{{ animal.nombre }}</strong> ({{ animal.tipo }}) 🐾</p>
+
+  <form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" id="nombre" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="correo">Correo</label>
+      <input type="email" name="correo" id="correo" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="mensaje">Mensaje</label>
+      <textarea name="mensaje" id="mensaje" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn-adoptar">Enviar solicitud</button>
+  </form>
+</div>
+{% endblock %}
